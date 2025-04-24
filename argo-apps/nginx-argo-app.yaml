@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: apps/nginx-deployment
-    repoURL: 'https://github.com/SMACAcademy/ArgoCD-Complete-Master-Course.git'
+    repoURL: 'https://github.com/chrs4711/hello-argo.git'
     targetRevision: HEAD
   project: default
   syncPolicy:
