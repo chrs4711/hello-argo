@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: recursive-dir-app
+  # This resource needs to be created in the namespace where argocd lives.
+  # The namespace of the actual app that gets deployed is defined below (spec.destination)
+  namespace: argocd
+spec:
+  destination:
+    namespace: firstns
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: apps/recursive-dir-app
+    repoURL: 'https://github.com/chrs4711/hello-argo.git'
+    targetRevision: HEAD
+    # In the path above we point argo to look in a directory that contains subdirectories with files.
+    # With `directory.recurse: true` we tell it go into the subdirectories.
+    directory:
+      recurse: true
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+    # - CreateNamespace=true

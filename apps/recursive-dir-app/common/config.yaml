@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: recursive-dir-app
+data:
+  foo: "bar"
+  value: 1337
