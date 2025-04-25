@@ -4,4 +4,4 @@ metadata:
   name: recursive-dir-app
 data:
   foo: "bar"
-  value: 1337
+  value: "1337"
