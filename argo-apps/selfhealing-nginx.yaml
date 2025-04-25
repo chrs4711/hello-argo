@@ -2,10 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: simplenginxapp
+  # This resource needs to be created in the namespace where argocd lives.
+  # The namespace of the actual app that gets deployed is defined below (spec.destination)
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: firstns
     server: 'https://kubernetes.default.svc'
   source:
     path: apps/nginx-deployment
