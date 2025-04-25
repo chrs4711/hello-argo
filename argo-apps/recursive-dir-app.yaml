@@ -18,9 +18,3 @@ spec:
     directory:
       recurse: true
   project: default
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: true
-    syncOptions:
-    # - CreateNamespace=true
