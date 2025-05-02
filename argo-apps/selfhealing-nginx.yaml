@@ -10,7 +10,7 @@ spec:
     namespace: firstns
     server: 'https://kubernetes.default.svc'
   source:
-    path: apps/nginx-deployment
+    path: apps/self-healing-nginx
     repoURL: 'https://github.com/chrs4711/hello-argo.git'
     targetRevision: HEAD
   project: default
