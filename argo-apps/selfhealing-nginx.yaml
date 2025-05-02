@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: simplenginxapp
+  name: self-healing-nginx
   # This resource needs to be created in the namespace where argocd lives.
   # The namespace of the actual app that gets deployed is defined below (spec.destination)
   namespace: argocd
