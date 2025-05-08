@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  hello-nginx-helm:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-05-08T15:43:11.623036+02:00"
+    description: A Helm chart for Kubernetes
+    digest: a72ed66adc1c43c7b52d417add3524f48e360b74bbbab6d015659775432f7ee3
+    name: hello-nginx-helm
+    type: application
+    urls:
+    - http://localhost:8123/hello-nginx-helm-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-08T15:43:11.622305+02:00"
