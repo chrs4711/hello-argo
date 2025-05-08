@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: {{ required "repository" .Values.image.repository }}:{{ required "repository" .Values.image.repository }}
+          image: {{ required "repository" .Values.image.repository }}:{{ required "tag" .Values.image.tag }}
           ports:
             - name: http
               containerPort: 80
