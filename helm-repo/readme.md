@@ -1,9 +1,6 @@
 # helm repo to play around with
 
-Create a folder `my-repo` and `cd` into it. Then serve this repo, e.g. with docker:
-
-`cd` into this repository and serve it.
-
+Create a directory `helm-repo` and `cd` into it. Then serve it!
 
 e.g. with docker:
 ```
