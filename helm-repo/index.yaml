@@ -3,12 +3,22 @@ entries:
   hello-nginx-helm:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-05-08T15:43:11.623036+02:00"
+    created: "2025-05-12T10:49:12.041057+02:00"
+    description: A Helm chart for Kubernetes
+    digest: df4998543a3bab552fd208b9d4ebd90ac6e7630a6484410547eda848e4e161d2
+    name: hello-nginx-helm
+    type: application
+    urls:
+    - http://192.168.65.254:8123/hello-nginx-helm-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-05-12T10:49:12.034687+02:00"
     description: A Helm chart for Kubernetes
     digest: a72ed66adc1c43c7b52d417add3524f48e360b74bbbab6d015659775432f7ee3
     name: hello-nginx-helm
     type: application
     urls:
-    - http://localhost:8123/hello-nginx-helm-0.1.0.tgz
+    - http://192.168.65.254:8123/hello-nginx-helm-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-08T15:43:11.622305+02:00"
+generated: "2025-05-12T10:49:12.027426+02:00"
