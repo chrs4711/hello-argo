@@ -7,7 +7,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: "{{ .Chart.Name }}.local"
+    # ingress routing is based on hostname. In the incoming request, the `Host` header
+    # needs to be set to `nginx.local` for this rule to kick in.
+    - host: nginx.local
       http:
         paths:
           - path: /
