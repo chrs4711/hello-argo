@@ -28,4 +28,4 @@ spec:
       volumes:
         - name: html
           configMap:
-            name: nginx
+            name: {{ .Chart.Name }}
