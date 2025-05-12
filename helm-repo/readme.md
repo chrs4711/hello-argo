@@ -19,12 +19,14 @@ cp mychart.tgz helm-repo
 
 Then `cd` into the repo and (re-)create the repo index:
 ```
-helm repo index . --url http://localhost:8123
+helm repo index . --url http://<address>:8123
 ```
+
+Make sure that `<address>` points to something that clients can actually reach.
 
 Make this repo known to helm:
 ```
-helm repo add my-repo http://localhost:8123
+helm repo add my-repo http://<address>:8123
 helm repo update
 ```
 
