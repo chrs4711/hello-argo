@@ -32,5 +32,14 @@ Watch argo getting rid of the newly appeared pods. Note that this also happens w
 is happening here yet. However, the replicaset which we manually set to 4 instances gets reverted back to how it's
 defined in git (2 resources). As a consequence, the newly created pods disappear.
 
+## nginx-helm-directory
+
+This is a bit different. Point argocd to `argo-apps/nginx-helm-directory` and argo will deploy whatever is in there.
+This happens to be an argocd app manifest, which in turn points to a helm-chart, which then gets deployed.
+This results in two applications that are managed by argocd:
+
+* The app defined by `argo-apps/nginx-helm-directory/nginx-helm-directory.yaml`. That's probably an app of apps.
+* The app defined by the helm-chart referenced by the above app.
+
 
 
