@@ -4,7 +4,8 @@ metadata:
   name: post-sync-hello
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    # Un-comment for the job to vanish if it runs successfully
+    # argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
