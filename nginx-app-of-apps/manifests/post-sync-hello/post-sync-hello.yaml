@@ -11,5 +11,5 @@ spec:
       containers:
         - name: post-sync
           image: busybox
-          command: ["sh", "-c", "echo Hello from PostSync hook; sleep 5"]
+          command: ["sh", "-c", "echo Hello from PostSync hook; sleep 10"]
       restartPolicy: Never
