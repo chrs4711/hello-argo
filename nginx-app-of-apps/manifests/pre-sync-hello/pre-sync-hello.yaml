@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pre-sync-hello
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    # Un-comment for the job to vanish if it runs successfully
+    # argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: pre-sync
+          image: busybox
+          command: ["sh", "-c", "echo Hello from PreSync hook; sleep 10"]
+      restartPolicy: Never
