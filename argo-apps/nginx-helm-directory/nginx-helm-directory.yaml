@@ -24,3 +24,19 @@ spec:
       prune: false
       selfHeal: true
     syncOptions:
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-post-sync-job
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: post-sync
+          image: busybox
+          command: ["sh", "-c", "echo Hello from post sync job; sleep 10"]
+      restartPolicy: Never
