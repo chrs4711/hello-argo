@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  # An ArgoCD-App that references a plain helm chart directory as a source
+  name: nginx-helm-directory
+  # This resource needs to be created in the namespace where argocd lives.
+  # The namespace of the actual app that gets deployed is defined below (spec.destination)
+  namespace: argocd
+spec:
+  destination:
+    namespace: firstns
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: apps/hello-nginx-helm
+    repoURL: 'https://github.com/chrs4711/hello-argo.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
