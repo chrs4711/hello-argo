@@ -25,6 +25,10 @@ spec:
       path: nginx-app-of-apps/manifests/post-sync-hello
       targetRevision: HEAD
 
+    - repoURL: https://github.com/chrs4711/hello-argo.git
+      path: nginx-app-of-apps/manifests/pre-sync-hello
+      targetRevision: HEAD
+
   syncPolicy:
     automated:
       prune: true
