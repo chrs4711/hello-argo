@@ -42,6 +42,14 @@ Fetch the initial password for user `admin`:
 argocd admin initial-password -n argocd
 ```
 
+### Ingress
+
+put into `/etc/hosts`:
+
+```
+127.0.0.1       nginx.local
+```
+
 
 
 
