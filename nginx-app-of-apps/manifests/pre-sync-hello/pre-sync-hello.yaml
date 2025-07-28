@@ -22,7 +22,7 @@ spec:
             - sh
             - -c
             - |
-              $STAGE="${JOB_NAMESPACE##*-}" # 'superapp-dev' -> 'dev'
+              STAGE="${JOB_NAMESPACE##*-}" # 'superapp-dev' -> 'dev'
               echo "Hello from PreSync hook running in namespace: $JOB_NAMESPACE, stage $STAGE"
               sleep 5
       restartPolicy: Never
