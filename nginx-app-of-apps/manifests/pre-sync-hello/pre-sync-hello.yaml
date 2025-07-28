@@ -11,17 +11,18 @@ spec:
     spec:
       containers:
         - name: pre-sync
-          image: busybox
+          image: curlimages/curl:latest
           env:
             - name: JOB_NAMESPACE
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-          # command: ["sh", "-c", "echo Hello from PreSync hook; sleep 10"]
+
           command:
             - sh
             - -c
             - |
-              echo "Hello from PreSync hook running in namespace: $JOB_NAMESPACE"
+              $STAGE="${JOB_NAMESPACE##*-}" # 'superapp-dev' -> 'dev'
+              echo "Hello from PreSync hook running in namespace: $JOB_NAMESPACE, stage $STAGE"
               sleep 5
       restartPolicy: Never
