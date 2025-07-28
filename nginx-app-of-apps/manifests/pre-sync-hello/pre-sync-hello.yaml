@@ -22,6 +22,6 @@ spec:
             - sh
             - -c
             - |
-              echo "Hello from PreSync hook running in namespace: $JOB_NAMESPACE
+              echo "Hello from PreSync hook running in namespace: $JOB_NAMESPACE"
               sleep 5
       restartPolicy: Never
